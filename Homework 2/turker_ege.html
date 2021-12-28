@@ -1,0 +1,36 @@
+<script>
+
+  loopFor:
+  for(var t = 0; t > 10; t++){
+    document.write("Pretest" + '<br>');
+  }
+  
+  loopWhile:
+  var t = 0;
+  while(t > 10){
+    document.write("Pretest" + '<br>');
+  }
+  
+  t = 0;
+  loopDoWhile:
+  do{
+    document.write("Posttest" + '<br>');
+
+  }while (t > 10);
+
+  loopCont:
+  for (var i = 0 ; i < 3; i++){
+    document.write("For Loop: " + i + '<br>');
+    var j = 0;
+    loopBreak:
+    while(j < 10){
+      document.write("While Loop: " + j + '<br>');
+      j++;
+      if(j == 2) break loopBreak;
+    }
+    if(i != 2) continue loopCont;
+    document.write("End of For Loop" + '<br>');
+}
+
+</script>
+

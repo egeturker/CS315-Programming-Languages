@@ -1,0 +1,29 @@
+<script>
+
+var playlists = { "pop": 104, "rock": 243, "jazz": 72, "electronic": 24 };
+
+document.write( playlists["pop"] + '<br>');
+document.write( playlists["metal"] + '<br>');
+
+playlists["hiphop"] = 44;
+
+delete playlists["rock"];
+
+playlists["jazz"] = 83;
+
+document.write(playlists.hasOwnProperty("electronic") + '<br>');
+document.write(playlists.hasOwnProperty("rock") + '<br>');
+
+document.write(Object.values(playlists).includes(104) + '<br>');
+document.write(Object.values(playlists).includes(243) + '<br>');
+
+for (const [key, value] of Object.entries(playlists)) {
+  foo(key, value);
+}
+
+function foo(key, value) {
+  document.write(key + ": " + value + '<br>');
+}
+
+</script>
+
